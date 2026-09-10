@@ -100,7 +100,8 @@ def analyze_match(message):
                 {"role": "system", "content": SYSTEM_PROMPT},
                 {"role": "user", "content": prompt}
             ],
-            model="llama-3.3-70b-versatile",
+            model="llama3-8b-8192",
+            
             temperature=0.3,
         )
         response_text = chat_completion.choices[0].message.content
