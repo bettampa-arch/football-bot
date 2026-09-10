@@ -100,7 +100,8 @@ def analyze_match(message):
                 {"role": "system", "content": SYSTEM_PROMPT},
                 {"role": "user", "content": prompt}
             ],
-            model="llama3-8b-8192",
+            model="llama-3.1-8b-instant",
+
             
             temperature=0.3,
         )
