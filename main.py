@@ -107,5 +107,7 @@ def run_bot():
 
 if __name__ == "__main__":
     threading.Thread(target=keep_alive, daemon=True).start()
-    run_bot()
-                
+    threading.Thread(target=run_bot, daemon=True).start()
+    port = int(os.environ.get("PORT", 10000))
+    app.run(host='0.0.0.0', port=port)
+    
